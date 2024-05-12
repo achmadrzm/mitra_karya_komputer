@@ -1,13 +1,12 @@
-<nav class="bg-gray-800" x-data="{ isOpen: false }">
+<nav class="bg-black" x-data="{ isOpen: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
         <div class="flex-shrink-0">
-            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <img class="h-8 w-8" src="public/img/FILE07082.png" alt="Mitra Karya Komputer">
         </div>
         <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
             <x-nav-link href="/tentang" :active="request()->is('tentang')">Tentang</x-nav-link>
             <x-nav-link href="/katalog" :active="request()->is('katalog')">Katalog</x-nav-link>
