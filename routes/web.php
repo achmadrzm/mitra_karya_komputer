@@ -3,7 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', ['title' => 'Home Page']);
+});
+
+Route::get('/tentang', function () {
+    return view('tentang', ['title' => 'Tentang']);
+});
+
+Route::get('/katalog', function () {
+    return view('katalog', ['title' => 'Katalog']);
+});
+
+Route::get('/lokasi', function () {
+    return view('lokasi', ['title' => 'Lokasi']);
 });
 
 Route::middleware([
