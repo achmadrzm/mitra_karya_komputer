@@ -1,9 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
+    return view('home', [HomeController::class, 'index']);
 });
 
 Route::get('/tentang', function () {
@@ -17,6 +22,8 @@ Route::get('/katalog', function () {
 Route::get('/lokasi', function () {
     return view('lokasi', ['title' => 'Lokasi']);
 });
+
+
 
 Route::middleware([
     'auth:sanctum',
